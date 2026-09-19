@@ -1,0 +1,97 @@
+/* =====================================================================
+   HEADER FIX PATCH
+   - Full-width header background
+   - Removes floating/inset navbar-card appearance
+   - Keeps logo + links aligned with page container
+   - Preserves sticky behavior
+===================================================================== */
+
+.site-header {
+    position: sticky !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: var(--header-height) !important;
+    padding: 0 !important;
+
+    background:
+        rgba(5, 6, 12, 0.92) !important;
+
+    border-top: 0 !important;
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.055) !important;
+
+    border-radius: 0 !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18) !important;
+
+    backdrop-filter: blur(18px) saturate(130%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(130%) !important;
+
+    z-index: 1000 !important;
+}
+
+.navbar {
+    min-height: var(--header-height) !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-menu {
+    align-items: center;
+}
+
+/* Cleaner active state */
+.nav-link {
+    border: 1px solid transparent !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(123, 92, 255, 0.13),
+            rgba(103, 183, 255, 0.045)
+        ) !important;
+
+    border-color:
+        rgba(155, 124, 255, 0.12) !important;
+
+    box-shadow: none !important;
+}
+
+/* Mobile dropdown remains visually attached to the full-width header */
+@media (max-width: 767px) {
+    .site-header {
+        height: var(--header-height) !important;
+    }
+
+    .navbar {
+        min-height: var(--header-height) !important;
+    }
+
+    .nav-menu {
+        top: calc(100% + 8px) !important;
+
+        background:
+            rgba(8, 9, 16, 0.98) !important;
+
+        border:
+            1px solid rgba(155, 124, 255, 0.14) !important;
+
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.45) !important;
+    }
+}
