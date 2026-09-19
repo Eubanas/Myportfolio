@@ -1,0 +1,650 @@
+/* =====================================================================
+   ARIEL B. EUBANAS JR. PORTFOLIO — THEME ONLY PATCH
+   -------------------------------------------------
+   This file changes ONLY visual styling:
+   - colors
+   - gradients
+   - borders
+   - shadows
+   - glow
+   - surfaces
+   - hover appearance
+
+   It DOES NOT change:
+   - widths
+   - heights
+   - grid columns
+   - layout
+   - spacing
+   - section order
+   - content
+===================================================================== */
+
+:root {
+    --theme-bg-0: #05060b;
+    --theme-bg-1: #090b14;
+    --theme-bg-2: #0d101b;
+
+    --theme-panel: rgba(15, 18, 31, 0.82);
+    --theme-panel-strong: rgba(18, 21, 36, 0.94);
+    --theme-panel-soft: rgba(255, 255, 255, 0.025);
+
+    --theme-text: #f6f7ff;
+    --theme-text-2: #bbc2d4;
+    --theme-text-3: #7f879a;
+
+    --theme-violet: #9b7cff;
+    --theme-violet-2: #7b5cff;
+    --theme-blue: #67b7ff;
+    --theme-cyan: #67e7ff;
+
+    --theme-line: rgba(155, 124, 255, 0.16);
+    --theme-line-hover: rgba(103, 183, 255, 0.34);
+
+    --theme-glow-violet: rgba(123, 92, 255, 0.20);
+    --theme-glow-blue: rgba(103, 183, 255, 0.12);
+}
+
+/* =====================================================================
+   GLOBAL BACKGROUND
+===================================================================== */
+
+html {
+    background: var(--theme-bg-0);
+}
+
+body {
+    color: var(--theme-text) !important;
+    background:
+        radial-gradient(circle at 12% 10%, rgba(123, 92, 255, 0.13), transparent 28%),
+        radial-gradient(circle at 88% 16%, rgba(103, 183, 255, 0.08), transparent 24%),
+        radial-gradient(circle at 52% 48%, rgba(103, 231, 255, 0.035), transparent 30%),
+        linear-gradient(180deg, var(--theme-bg-0), var(--theme-bg-1) 48%, var(--theme-bg-0)) !important;
+}
+
+body::before {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px) !important;
+    background-size: 48px 48px !important;
+}
+
+::selection {
+    color: #fff !important;
+    background: var(--theme-violet-2) !important;
+}
+
+/* =====================================================================
+   NAVIGATION
+===================================================================== */
+
+.site-header {
+    background: rgba(5, 7, 13, 0.74) !important;
+    border-bottom-color: rgba(255,255,255,0.045) !important;
+    backdrop-filter: blur(20px) saturate(135%);
+    -webkit-backdrop-filter: blur(20px) saturate(135%);
+}
+
+.navbar {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.014)) !important;
+    border-color: rgba(155,124,255,0.10) !important;
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.26),
+        inset 0 1px 0 rgba(255,255,255,0.04) !important;
+}
+
+.brand {
+    color: #fff !important;
+}
+
+.brand::after {
+    color: var(--theme-cyan) !important;
+    text-shadow: 0 0 14px rgba(103,231,255,0.5);
+}
+
+.nav-link {
+    color: #aeb4c5 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+    background:
+        linear-gradient(135deg, rgba(123,92,255,0.16), rgba(103,183,255,0.07)) !important;
+    box-shadow:
+        inset 0 0 0 1px rgba(155,124,255,0.10),
+        0 8px 20px rgba(0,0,0,0.14) !important;
+}
+
+.nav-toggle {
+    color: #fff !important;
+    background: rgba(255,255,255,0.028) !important;
+    border-color: rgba(155,124,255,0.13) !important;
+}
+
+/* =====================================================================
+   HERO
+===================================================================== */
+
+.hero {
+    background:
+        radial-gradient(circle at 50% 27%, rgba(123,92,255,0.11), transparent 34%),
+        radial-gradient(circle at 50% 72%, rgba(103,183,255,0.045), transparent 30%) !important;
+}
+
+.hero::before {
+    background:
+        radial-gradient(circle at center, rgba(123,92,255,0.11), transparent 62%) !important;
+    filter: blur(12px) !important;
+}
+
+.profile-image,
+.profile-placeholder {
+    border-color: rgba(155,124,255,0.22) !important;
+    background-color: var(--theme-bg-2) !important;
+    box-shadow:
+        0 24px 58px rgba(0,0,0,0.42),
+        0 0 0 1px rgba(155,124,255,0.05),
+        0 0 30px rgba(123,92,255,0.08) !important;
+}
+
+.eyebrow,
+.section-kicker {
+    color: #b9a7ff !important;
+    text-shadow: 0 0 18px rgba(123,92,255,0.18);
+}
+
+.hero h1 {
+    background:
+        linear-gradient(180deg, #ffffff 12%, #e8eaff 58%, #cfd8f5 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+.hero-role {
+    color: #b9a7ff !important;
+}
+
+.hero-intro {
+    color: var(--theme-text-2) !important;
+}
+
+/* =====================================================================
+   BUTTONS
+===================================================================== */
+
+.button-primary {
+    color: #fff !important;
+    background:
+        linear-gradient(135deg, #8a67ff, #6554ea 56%, #4f7de9) !important;
+    border-color: rgba(255,255,255,0.08) !important;
+    box-shadow:
+        0 12px 30px rgba(92,76,220,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.18) !important;
+}
+
+.button-primary:hover {
+    box-shadow:
+        0 16px 38px rgba(92,76,220,0.33),
+        0 0 24px rgba(103,183,255,0.09),
+        inset 0 1px 0 rgba(255,255,255,0.20) !important;
+}
+
+.button-secondary {
+    color: #e7eaff !important;
+    background: rgba(255,255,255,0.024) !important;
+    border-color: rgba(155,124,255,0.13) !important;
+}
+
+.button-secondary:hover {
+    background: rgba(123,92,255,0.07) !important;
+    border-color: rgba(155,124,255,0.25) !important;
+}
+
+/* =====================================================================
+   UNIVERSAL CARD SURFACE
+===================================================================== */
+
+.card {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.032), rgba(255,255,255,0.010)),
+        var(--theme-panel) !important;
+    border-color: var(--theme-line) !important;
+    box-shadow:
+        0 22px 56px rgba(0,0,0,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.035) !important;
+}
+
+.card::before {
+    background:
+        linear-gradient(135deg, rgba(155,124,255,0.07), transparent 38%) !important;
+}
+
+.card:hover {
+    border-color: var(--theme-line-hover) !important;
+    background:
+        linear-gradient(145deg, rgba(103,183,255,0.035), rgba(123,92,255,0.035)),
+        var(--theme-panel-strong) !important;
+    box-shadow:
+        0 28px 70px rgba(0,0,0,0.34),
+        0 0 34px rgba(123,92,255,0.055) !important;
+}
+
+/* =====================================================================
+   ABOUT
+===================================================================== */
+
+.about {
+    background:
+        linear-gradient(180deg, transparent, rgba(103,183,255,0.015), transparent) !important;
+}
+
+.about-card h3 {
+    color: #fff !important;
+}
+
+.about-card p {
+    color: var(--theme-text-2) !important;
+}
+
+/* =====================================================================
+   EDUCATION
+===================================================================== */
+
+.education-card {
+    background:
+        linear-gradient(145deg, rgba(123,92,255,0.045), rgba(103,183,255,0.015)),
+        var(--theme-panel) !important;
+}
+
+.education-main {
+    border-color: rgba(255,255,255,0.055) !important;
+}
+
+.education-main h3,
+.education-coursework h3 {
+    color: #fff !important;
+}
+
+.education-school {
+    color: #b9a7ff !important;
+}
+
+.education-year {
+    color: var(--theme-text-3) !important;
+}
+
+/* =====================================================================
+   TAGS / CHIPS
+===================================================================== */
+
+.tag-list li {
+    color: #ded7ff !important;
+    background:
+        linear-gradient(135deg, rgba(123,92,255,0.075), rgba(103,183,255,0.025)) !important;
+    border-color: rgba(155,124,255,0.16) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.035) !important;
+}
+
+/* =====================================================================
+   SKILLS
+===================================================================== */
+
+.skills {
+    background:
+        radial-gradient(circle at 15% 30%, rgba(103,183,255,0.025), transparent 30%),
+        radial-gradient(circle at 85% 70%, rgba(123,92,255,0.035), transparent 28%) !important;
+}
+
+.skill-card {
+    background:
+        linear-gradient(150deg, rgba(255,255,255,0.03), rgba(123,92,255,0.018)),
+        var(--theme-panel) !important;
+}
+
+.skill-card h3 {
+    color: #fff !important;
+}
+
+.skill-card li {
+    color: var(--theme-text-2) !important;
+}
+
+.skill-card li::before {
+    background:
+        linear-gradient(180deg, var(--theme-cyan), var(--theme-violet)) !important;
+    box-shadow:
+        0 0 11px rgba(103,183,255,0.45) !important;
+}
+
+/* =====================================================================
+   DEVELOPMENT CAPABILITIES
+===================================================================== */
+
+.stack-card {
+    background:
+        linear-gradient(145deg, rgba(103,183,255,0.025), rgba(123,92,255,0.03)),
+        var(--theme-panel) !important;
+}
+
+.stack-number {
+    color: var(--theme-cyan) !important;
+}
+
+.stack-card h3 {
+    color: #fff !important;
+}
+
+.stack-card p {
+    color: var(--theme-text-2) !important;
+}
+
+.stack-connector {
+    color: #9f90ff !important;
+    text-shadow: 0 0 14px rgba(123,92,255,0.35) !important;
+}
+
+.capability-list-wrapper {
+    background:
+        linear-gradient(145deg, rgba(123,92,255,0.025), rgba(103,183,255,0.018)),
+        var(--theme-panel) !important;
+}
+
+.capability-list-wrapper h3 {
+    color: #fff !important;
+}
+
+.capability-list li {
+    color: var(--theme-text-2) !important;
+    background: rgba(255,255,255,0.017) !important;
+    border-color: rgba(255,255,255,0.045) !important;
+}
+
+.capability-list li::before {
+    color: var(--theme-cyan) !important;
+}
+
+/* =====================================================================
+   PROJECTS
+===================================================================== */
+
+.projects {
+    background:
+        radial-gradient(circle at 50% 32%, rgba(123,92,255,0.055), transparent 44%),
+        radial-gradient(circle at 80% 66%, rgba(103,183,255,0.025), transparent 26%) !important;
+}
+
+.project-card {
+    background:
+        linear-gradient(145deg, rgba(123,92,255,0.032), rgba(103,183,255,0.014)),
+        var(--theme-panel) !important;
+}
+
+.project-card::after {
+    background:
+        linear-gradient(180deg, var(--theme-violet), var(--theme-blue), transparent) !important;
+}
+
+.project-number {
+    color: #b9a7ff !important;
+}
+
+.project-heading h3 {
+    color: #fff !important;
+}
+
+.project-description {
+    color: var(--theme-text-2) !important;
+}
+
+.project-toggle {
+    color: #ede9ff !important;
+    background:
+        linear-gradient(135deg, rgba(123,92,255,0.105), rgba(103,183,255,0.035)) !important;
+    border-color: rgba(155,124,255,0.20) !important;
+}
+
+.project-toggle:hover {
+    background:
+        linear-gradient(135deg, rgba(123,92,255,0.17), rgba(103,183,255,0.055)) !important;
+    border-color: rgba(103,183,255,0.26) !important;
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.18),
+        0 0 18px rgba(123,92,255,0.06) !important;
+}
+
+.project-toggle-icon {
+    color: #fff !important;
+    background:
+        linear-gradient(135deg, #916fff, #5f6ce4) !important;
+    box-shadow:
+        0 5px 14px rgba(92,76,220,0.24) !important;
+}
+
+.project-block {
+    border-color: rgba(255,255,255,0.05) !important;
+}
+
+.project-block h4 {
+    color: #f6f5ff !important;
+}
+
+.project-block p {
+    color: var(--theme-text-2) !important;
+}
+
+.project-feature-list-detailed li {
+    color: var(--theme-text-2) !important;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.024), rgba(103,183,255,0.008)) !important;
+    border-color: rgba(255,255,255,0.055) !important;
+}
+
+.project-feature-list-detailed li::before {
+    color: var(--theme-cyan) !important;
+}
+
+.project-feature-list-detailed strong {
+    color: #fff !important;
+}
+
+.project-feature-list-detailed span {
+    color: var(--theme-text-2) !important;
+}
+
+.project-type {
+    color: #ded7ff !important;
+    background:
+        linear-gradient(135deg, rgba(123,92,255,0.08), rgba(103,183,255,0.025)) !important;
+    border-color: rgba(155,124,255,0.16) !important;
+}
+
+/* =====================================================================
+   DEVELOPMENT PROCESS
+===================================================================== */
+
+.process {
+    background:
+        linear-gradient(180deg, transparent, rgba(123,92,255,0.016), transparent) !important;
+}
+
+.process-card {
+    background:
+        linear-gradient(145deg, rgba(103,183,255,0.022), rgba(123,92,255,0.024)),
+        var(--theme-panel) !important;
+}
+
+.process-number {
+    color: var(--theme-cyan) !important;
+}
+
+.process-card h3 {
+    color: #fff !important;
+}
+
+.process-card p {
+    color: var(--theme-text-2) !important;
+}
+
+/* =====================================================================
+   EXPERIENCE
+===================================================================== */
+
+.experience-list::before {
+    background:
+        linear-gradient(180deg, var(--theme-violet), var(--theme-blue), transparent) !important;
+}
+
+.experience-card {
+    background:
+        linear-gradient(145deg, rgba(123,92,255,0.025), rgba(103,183,255,0.018)),
+        var(--theme-panel) !important;
+}
+
+.experience-card::after {
+    background:
+        linear-gradient(135deg, var(--theme-violet), var(--theme-cyan)) !important;
+    box-shadow:
+        0 0 0 6px rgba(123,92,255,0.07),
+        0 0 22px rgba(103,183,255,0.14) !important;
+}
+
+.experience-type {
+    color: #b9a7ff !important;
+}
+
+.experience-header h3 {
+    color: #fff !important;
+}
+
+.experience-date,
+.experience-organization {
+    color: var(--theme-text-3) !important;
+}
+
+.experience-role {
+    color: #d5caff !important;
+}
+
+.experience-responsibilities li {
+    color: var(--theme-text-2) !important;
+}
+
+.experience-responsibilities li::before {
+    color: var(--theme-cyan) !important;
+}
+
+/* =====================================================================
+   WHY HIRE ME
+===================================================================== */
+
+.why-hire-me {
+    background:
+        radial-gradient(circle at 50% 45%, rgba(103,183,255,0.025), transparent 38%) !important;
+}
+
+.value-card {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.028), rgba(123,92,255,0.017)),
+        var(--theme-panel) !important;
+}
+
+.value-card h3 {
+    color: #fff !important;
+}
+
+.value-card p {
+    color: var(--theme-text-2) !important;
+}
+
+/* =====================================================================
+   CONTACT
+===================================================================== */
+
+.contact {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(123,92,255,0.06), transparent 42%),
+        radial-gradient(circle at 80% 70%, rgba(103,183,255,0.025), transparent 24%) !important;
+}
+
+.contact-simple {
+    background:
+        linear-gradient(145deg, rgba(123,92,255,0.045), rgba(103,183,255,0.022)),
+        rgba(14,17,29,0.88) !important;
+    border-color: rgba(155,124,255,0.18) !important;
+    box-shadow:
+        0 26px 70px rgba(0,0,0,0.34),
+        0 0 42px rgba(123,92,255,0.045),
+        inset 0 1px 0 rgba(255,255,255,0.04) !important;
+}
+
+.contact-simple h2 {
+    color: #fff !important;
+}
+
+.contact-message {
+    color: var(--theme-text-2) !important;
+}
+
+.contact-info-item {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.025), rgba(103,183,255,0.010)) !important;
+    border-color: rgba(155,124,255,0.12) !important;
+}
+
+.contact-info-label {
+    color: var(--theme-text-3) !important;
+}
+
+.contact-info-item a,
+.contact-info-item > span:last-child {
+    color: #ddd7ff !important;
+}
+
+/* =====================================================================
+   FOOTER
+===================================================================== */
+
+.site-footer {
+    background:
+        linear-gradient(180deg, rgba(5,6,11,0.94), rgba(3,4,8,0.98)) !important;
+    border-top-color: rgba(255,255,255,0.045) !important;
+}
+
+.footer-name {
+    color: #fff !important;
+}
+
+.footer-container > div p:last-child,
+.copyright {
+    color: var(--theme-text-3) !important;
+}
+
+.footer-email {
+    color: #b9a7ff !important;
+}
+
+/* =====================================================================
+   SCROLLBAR
+===================================================================== */
+
+::-webkit-scrollbar-track {
+    background: #06070c !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(var(--theme-violet-2), var(--theme-blue)) !important;
+    border-color: #06070c !important;
+}
+
+/* =====================================================================
+   ACCESSIBILITY / FOCUS
+===================================================================== */
+
+:focus-visible {
+    outline-color: var(--theme-cyan) !important;
+}

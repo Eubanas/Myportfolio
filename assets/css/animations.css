@@ -1,0 +1,18 @@
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes softPulse{0%,100%{opacity:.65}50%{opacity:1}}
+.hero-visual{animation:heroFloat 5s ease-in-out infinite}.hero-visual::after{animation:softPulse 4s ease-in-out infinite}
+@media (hover:hover) and (pointer:fine){.skill-card:hover,.about-card:hover,.value-card:hover,.process-card:hover,.stack-card:hover{transform:translateY(-6px) rotateX(1deg) rotateY(-1deg)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* =========================================================
+   STATIC HERO AVATAR OVERRIDES
+========================================================= */
+
+.hero-visual,
+.hero-visual::before,
+.hero-visual::after,
+.profile-placeholder,
+.profile-image {
+    animation: none !important;
+}
